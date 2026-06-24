@@ -9,9 +9,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }
@@ -27,48 +27,54 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-TextButton(
-  style: TextButton.styleFrom(
-    backgroundColor: Colors.black,
-    minimumSize: const Size(240, 80),
-  ),
-  onPressed: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => const Image1Page(),
+            TextButton(
+              style: TextButton.styleFrom(
+                backgroundColor: Colors.black,
+                minimumSize: const Size(320, 120),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const Image1Page(),
+                  ),
+                );
+              },
+              child: const Text(
+                'Ay🤣👏',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 48,
+                ),
+              ),
+            ),
+            TextButton(
+              style: TextButton.styleFrom(
+                backgroundColor: Colors.black,
+                minimumSize: const Size(320, 120),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const Image2Page(),
+                  ),
+                );
+              },
+              child: const Text(
+                'kedi',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 48,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
-  },
-  child: const Text(
-    'Ay🤣👏',
-    style: TextStyle(
-      color: Colors.white,
-      fontSize: 32,
-    ),
-  ),
-),
-TextButton(
-  style: TextButton.styleFrom(
-    backgroundColor: Colors.black,
-    minimumSize: const Size(240, 80),
-  ),
-  onPressed: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => const Image2Page(),
-      ),
-    );
-  },
-  child: const Text(
-    'kedi',
-    style: TextStyle(
-      color: Colors.white,
-      fontSize: 32,
-    ),
-  ),
-),
+  }
+}
 
 class Image1Page extends StatelessWidget {
   const Image1Page({super.key});
@@ -87,8 +93,11 @@ class Image1Page extends StatelessWidget {
                   Navigator.pop(context);
                 },
                 child: const Text(
-                  'Geri',
-                  style: TextStyle(color: Colors.white),
+                  '<',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
                 ),
               ),
             ),
@@ -124,8 +133,11 @@ class Image2Page extends StatelessWidget {
                   Navigator.pop(context);
                 },
                 child: const Text(
-                  'Geri',
-                  style: TextStyle(color: Colors.white),
+                  '<',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
                 ),
               ),
             ),
