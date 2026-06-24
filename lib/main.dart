@@ -27,46 +27,48 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            TextButton(
-              style: TextButton.styleFrom(
-                backgroundColor: Colors.black,
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => const Image1Page(),
-                  ),
-                );
-              },
-              child: const Text(
-                'Ay🤣👏',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                backgroundColor: Colors.black,
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => const Image2Page(),
-                  ),
-                );
-              },
-              child: const Text(
-                'kedi',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          ],
-        ),
+TextButton(
+  style: TextButton.styleFrom(
+    backgroundColor: Colors.black,
+    minimumSize: const Size(240, 80),
+  ),
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => const Image1Page(),
       ),
     );
-  }
-}
+  },
+  child: const Text(
+    'Ay🤣👏',
+    style: TextStyle(
+      color: Colors.white,
+      fontSize: 32,
+    ),
+  ),
+),
+TextButton(
+  style: TextButton.styleFrom(
+    backgroundColor: Colors.black,
+    minimumSize: const Size(240, 80),
+  ),
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => const Image2Page(),
+      ),
+    );
+  },
+  child: const Text(
+    'kedi',
+    style: TextStyle(
+      color: Colors.white,
+      fontSize: 32,
+    ),
+  ),
+),
 
 class Image1Page extends StatelessWidget {
   const Image1Page({super.key});
